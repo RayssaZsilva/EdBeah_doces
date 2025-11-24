@@ -1,0 +1,264 @@
+:root {
+--pink-1: #ffd6ec;
+--pink-2: #ffb6c1;
+--accent: #ff69b4;
+--tag-bg: rgba(255,255,255,0.7);
+--card-bg: rgba(255,255,255,0.85);
+--shadow: 0 8px 24px rgba(0,0,0,0.12);
+--radius: 14px;
+--glass: rgba(255,255,255,0.22);
+}
+
+
+* {
+box-sizing: border-box; font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+    body{
+      margin:0;
+      background: linear-gradient(90deg, #fff3b8 0%, #ffd2ee 50%, #ffb6f5 100%);
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap: 18px;
+      color:#333;
+      padding:24px;
+}
+.header {
+    position: relative; /* permite sobrepor elementos */
+    width: 100%;
+    text-align: center;
+    margin-top: 40px; 
+}
+
+/* LOGO ESTILO CARIMBO ATRÁS DO TEXTO */
+.logo-img {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-60%, -55%); /* centraliza e sobe um pouco */
+    width: 500px;
+    opacity: 0.90; /* deixa com aparência de carimbo */
+    z-index: 1; /* fica atrás do texto */
+    pointer-events: none; /* evita clicar na imagem por engano */
+}
+
+/* TEXTO POR CIMA */
+.logo-text {
+    position: relative;
+    z-index: 2;  /* fica por cima da logo */
+    font-family: 'Great Vibes', cursive;
+    font-size: 50px;
+    color: #e15dba;
+    margin: 0;
+    text-shadow: 
+        0 0 0px #f5f770, 
+        0 0 30px #f5d74f, 
+        0 0 40px #ff69b4;
+    animation: blink 1.5s infinite alternate;
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+    text-shadow: 0 0 5px #ffb6c1, 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 40px #bff05cff;
+  }
+  to {
+    opacity: 0.6;
+    text-shadow: 0 0 2px #ffb6c1, 0 0 5px #ff69b4, 0 0 10px #ff69b4;
+  }
+}
+
+
+.container {
+width: 100%;
+max-width: 1100px;
+background: transparent;
+margin-top: 10px; 
+}
+
+.produtos{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+      gap:20px;
+      align-items:start;
+      margin-bottom:8px;
+    }
+
+
+.card{
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding:12px;
+      box-shadow: var(--shadow);
+      display:flex;
+      flex-direction:column;
+      align-items:stretch;
+      position:relative;
+      overflow:visible;
+    }
+
+
+.tag{
+      position:absolute;
+      top:-14px;
+      left:12px;
+      background: var(--tag-bg);
+      padding:6px 10px;
+      border-radius:10px;
+      font-weight:700;
+      color: #4a2b4a;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      border: 1px solid rgba(255,255,255,0.6);
+      text-transform: uppercase;
+      font-size:13px;
+    }
+
+
+.card img{
+      width:100%;
+      height:150px;
+      object-fit:cover;
+      border-radius:10px;
+      margin-bottom:12px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+    }
+
+     .info{
+      text-align:center;
+      padding:4px 6px 8px 6px;
+      flex-grow:1;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+     .info h3{
+      margin:6px 0 4px 0;
+      font-size:18px;
+      color:#5b235b;
+    }
+
+    .info p{
+      margin:0;
+      font-weight:700;
+      color:#333;
+    }
+     .btn-add{
+      margin-top:10px;
+      background: var(--accent);
+      color:white;
+      border:none;
+      padding:10px;
+      border-radius:12px;
+      cursor:pointer;
+      font-weight:700;
+      box-shadow: 0 6px 14px rgba(255,105,180,0.25);
+    }
+     /* carrinho */
+    .carrinho{
+      margin-top:8px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.85));
+      border-radius:16px;
+      padding:14px;
+      box-shadow: var(--shadow);
+      display:flex;
+      gap:12px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+
+    .carrinho .itens{
+      min-width:220px;
+      max-width:760px;
+    }
+
+    .itens ul{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+      max-height:140px;
+      overflow:auto;
+    }
+
+    .itens li{
+      background: rgba(255,255,255,0.9);
+      padding:8px 10px;
+      border-radius:10px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      border:1px solid rgba(0,0,0,0.03);
+    }
+    .itens li .remove{
+      background: transparent;
+      border: none;
+      color:#c0392b;
+      font-weight:700;
+      cursor:pointer;
+      font-size:14px;
+    }
+
+    .totais{
+      text-align:right;
+      min-width:160px;
+    }
+
+    .totais p{ margin:4px 0; font-weight:700; font-size:18px; color:#4b2b4b; }
+
+    .finalizar{
+      width:100%;
+      max-width:220px;
+      background: #25D366; /* whatsapp green */
+      color:white;
+      border:none;
+      padding:12px 14px;
+      border-radius:12px;
+      font-weight:800;
+      cursor:pointer;
+      box-shadow: 0 8px 20px rgba(37,211,102,0.18);
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      justify-content:center;
+    }
+
+    .finalizar:active{ transform:translateY(1px); }
+
+    /* adicionar secao button estilo da imagem */
+    .add-section{
+      margin-top:14px;
+      width:100%;
+      max-width:1100px;
+      display:flex;
+      justify-content:center;
+    }
+
+    /* .add-section button{
+      background: transparent;
+      border:2px dashed rgba(0,0,0,0.08);
+      padding:14px 20px;
+      border-radius:12px;
+      width:100%;
+      max-width:420px;
+      font-weight:700;
+      cursor:pointer;
+      color:#5b235b;
+      background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.3));
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    } */
+.remove {
+  background: transparent;
+  border: none;
+  color: #ff4d6d;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.remove:hover {
+  text-decoration: underline;
+}
