@@ -147,6 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
       msg += `${i + 1}. ${item.nome} — R$ ${item.preco.toFixed(2)}%0A`;
     });
     msg += `%0ATotal: R$ ${total.toFixed(2)}%0A`;
+     
 
     const url = `https://api.whatsapp.com/send?phone=${WHATSAPP_PHONE}&text=${msg}`;
     window.open(url, "_blank");
