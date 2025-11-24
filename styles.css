@@ -252,38 +252,58 @@ margin-top: 10px;
 .remove:hover {
   text-decoration: underline;
 }
-@media{
-    .logo-img {
-    position: absolute;
-    top: 50%;
-    left: 0%;
-    transform: translate(-60%, -55%); /* centraliza e sobe um pouco */
-    width: 500px;
-    opacity: 0.90; /* deixa com aparência de carimbo */
-    z-index: 1; /* fica atrás do texto */
-    pointer-events: none; /* evita clicar na imagem por engano */
+/* =================##############=================
+   AJUSTES PARA CELULARES
+   =================##############================= */
+@media (max-width: 600px) {
+
+  body {
+    padding: 12px;
+  }
+
+  .header {
+    margin-top: 20px;
+  }
+
+  .logo-img {
+      width: 260px;
+      left: 50%;
+      top: 20%;
+      transform: translate(-50%, -20%);
+  }
+
+  .logo-text {
+      font-size: 32px;
+  }
+
+  .container {
+      padding: 0 8px;
+  }
+
+  .produtos {
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 14px;
+  }
+
+  .card img {
+      width: 100%;
+      height: auto;
+  }
+
+  .info h3 {
+      font-size: 16px;
+  }
+
+  .btn-add {
+      padding: 8px;
+      font-size: 14px;
+  }
+
+  .itens ul {
+      max-width: 100%;
+  }
+
 }
 
-/* TEXTO POR CIMA */
-.logo-text {
-    position: relative;
-    z-index: 2;  /* fica por cima da logo */
-    font-family: 'Great Vibes', cursive;
-    font-size: 50px;
-    color: #e15dba;
-    margin: 0;
-    text-shadow: 
-        0 0 0px #f5f770, 
-        0 0 30px #f5d74f, 
-        0 0 40px #ff69b4;
-    animation: blink 1.5s infinite alternate;
-}
 
-    .itens ul{
-      max-width: 90%;
-    }
-.card img{
-  max-width: 100%;
-}
 
-}
