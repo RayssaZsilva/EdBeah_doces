@@ -71,15 +71,15 @@ box-sizing: border-box; font-family: "Poppins", system-ui, -apple-system, "Segoe
 
 .container {
 width: 100%;
-max-width: 1100px;
+max-width: auto;
 background: transparent;
 margin-top: 10px; 
 }
 
 .produtos{
       display:grid;
-      grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-      gap:20px;
+      grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+      gap:10px;
       align-items:start;
       margin-bottom:8px;
     }
@@ -116,7 +116,7 @@ margin-top: 10px;
 
 .card img{
       height:auto;
-      max-width:250px;
+      max-width:auto;
       object-fit:cover;
       border-radius:10px;
       margin-bottom:12px;
@@ -130,6 +130,7 @@ margin-top: 10px;
       display:flex;
       flex-direction:column;
       justify-content:space-between;
+    
     }
      .info h3{
       margin:6px 0 4px 0;
