@@ -9,10 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const sabores = {
     "Morango do amor": ["Convencional", "coxinha de chocolate melkine", "ninho com morango"],
     "Cone": ["Ninho com nutella", "Brigadeiro", "Prestígio", "Maracujá", "Oreo", "Ferrero"],
-    "Bolo de pote": ["Chocolate", "Ninho com morango", "Prestígio", "Doce de leite"],
+    "Bolo de pote": ["Brigadeiro", "Ninho com morango", "Prestígio", "Cenoura com Chocolate", "Brigadeiro C/ Chantilly", "Maracujá","Ninho com Nutela"],
     "Brigadeiro": ["5 Unidades"],
     "Coxinha": ["Pistache"],
-    "Copo":["chocobrownie"]
+    "Copo":["Chocobrownie", "Frutas Vermelhas"],
+    "Gelão":["Limão","Maracujá","Oreo","Coco"],
   };
 
   let produtoSelecionado = null;
