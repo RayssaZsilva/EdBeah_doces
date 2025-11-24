@@ -236,20 +236,7 @@ margin-top: 10px;
       display:flex;
       justify-content:center;
     }
-
-    /* .add-section button{
-      background: transparent;
-      border:2px dashed rgba(0,0,0,0.08);
-      padding:14px 20px;
-      border-radius:12px;
-      width:100%;
-      max-width:420px;
-      font-weight:700;
-      cursor:pointer;
-      color:#5b235b;
-      background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.3));
-      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-    } */
+    
 .remove {
   background: transparent;
   border: none;
@@ -261,88 +248,4 @@ margin-top: 10px;
 
 .remove:hover {
   text-decoration: underline;
-}
-/* ===========================
-      ESTILO ORIGINAL DESKTOP
-   =========================== */
-
-.header {
-    position: relative;
-    text-align: center;
-    margin-top: 20px;
-    padding-top: 40px; 
-}
-
-/* Logo estilo carimbo */
-.logo-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -55%);
-    width: 260px;
-    opacity: 0.25;
-    z-index: 1;
-    pointer-events: none;
-}
-
-/* Letreiro */
-.logo-text {
-    position: relative;
-    z-index: 2;
-    font-family: 'Great Vibes', cursive;
-    font-size: 64px;
-    color: #e15dba;
-    margin: 0;
-    text-shadow: 
-        0 0 5px #f5f770, 
-        0 0 10px #f5d74f, 
-        0 0 20px #ff69b4;
-    animation: blink 1.5s infinite alternate;
-}
-
-
-/* ===========================
-      RESPONSIVIDADE CELULAR
-   =========================== */
-
-@media (max-width: 600px) {
-
-    /* Desce o header para não cortar no topo */
-    header {
-        margin-top: 50px;
-        padding: 24px 12px;
-    }
-
-    /* Centralização segura */
-    .header {
-        padding-top: 55px;
-    }
-
-    /* Logo estilo carimbo menor */
-    .logo-img {
-        width: 160px;
-        transform: translate(-50%, -60%); 
-        opacity: 0.22; /* mais sutil em telas pequenas */
-    }
-
-    /* Letreiro menor e ajustado */
-    .logo-text {
-        font-size: 42px;
-        line-height: 1;
-    }
-}
-
-
-/* ===========================
-     TELAS MÉDIAS (TABLETS)
-   =========================== */
-
-@media (max-width: 900px) {
-    .logo-img {
-        width: 200px;
-    }
-
-    .logo-text {
-        font-size: 54px;
-    }
 }
