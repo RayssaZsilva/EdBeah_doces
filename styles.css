@@ -236,7 +236,7 @@ margin-top: 10px;
       display:flex;
       justify-content:center;
     }
-    
+
 .remove {
   background: transparent;
   border: none;
@@ -248,4 +248,13 @@ margin-top: 10px;
 
 .remove:hover {
   text-decoration: underline;
+}
+@media (max-width: 900px) {
+    .logo-img {
+        width: 200px;
+    }
+
+    .logo-text {
+        font-size: 54px;
+    }
 }
