@@ -14,7 +14,7 @@
 box-sizing: border-box; font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
     body{
       margin:0;
-      background: linear-gradient(90deg,  #ffb6f5 0%, #ffd2ee 50%, #fff3b8 100%);
+      background: linear-gradient(90deg, #f4bcecff 0%, #ffbfffff 50%, #fff3b8 100%);
       min-height:100vh;
       display:flex;
       flex-direction:column;
@@ -48,11 +48,11 @@ box-sizing: border-box; font-family: "Poppins", system-ui, -apple-system, "Segoe
     z-index: 2;  /* fica por cima da logo */
     font-family: 'Great Vibes', cursive;
     font-size: 50px;
-    color: #e15dba;
+    color: #c9469ece;
     margin: 0;
     text-shadow: 
-        0 0 40px #ff69b4,
-        0 0 0px #f5f770, 
+        0 0 40px #93db6dff,
+        0 0 0px rgba(49, 189, 196, 1), 
         0 0 30px #f5d74f;
         
     animation: blink 1.5s infinite alternate;
@@ -61,7 +61,7 @@ box-sizing: border-box; font-family: "Poppins", system-ui, -apple-system, "Segoe
 @keyframes blink {
   from {
     opacity: 1;
-    text-shadow: 0 0 5px #ffb6c1, 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 40px #bff05cff;
+    text-shadow: 0 0 5px #d16ebf81, 0 0 10px #ff69b4, 0 0 20px #cf5190ff, 0 0 40px #bff05cff;
   }
   to {
     opacity: 0.6;
