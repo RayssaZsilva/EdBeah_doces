@@ -249,12 +249,12 @@ margin-top: 10px;
 .remove:hover {
   text-decoration: underline;
 }
-@media (max-width: 900px) {
+@media (max-width: 600px) {
     .logo-img {
-        width: 200px;
+        width: 100px;
     }
 
     .logo-text {
-        font-size: 54px;
+        font-size: 40px;
     }
 }
