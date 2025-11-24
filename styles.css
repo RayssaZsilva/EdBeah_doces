@@ -252,7 +252,7 @@ margin-top: 10px;
 .remove:hover {
   text-decoration: underline;
 }
-@media (max-width: 768px) {
+@media{
     .logo-img {
     position: absolute;
     top: 50%;
