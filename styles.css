@@ -156,47 +156,60 @@ margin-top: 10px;
       box-shadow: 0 6px 14px rgba(255,105,180,0.25);
     }
      /* carrinho */
-    .carrinho{
-      margin-top:8px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.85));
-      border-radius:16px;
-      padding:14px;
-      box-shadow: var(--shadow);
-      display:flex;
-      gap:12px;
-      align-items:center;
-      justify-content:space-between;
-      flex-wrap:wrap;
-    }
+    .carrinho {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1100px;
+
+    background: linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0.95));
+    border-radius: 18px 18px 0 0;
+
+    padding: 12px 20px;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.10);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
 
     .carrinho .itens{
       min-width:220px;
       max-width:760px;
     }
 
-    .itens ul{
-      list-style:none;
-      padding:0;
-      margin:auto;
-      display:flex;
-      flex-direction:column;
-      gap:6px;
-      max-height:140px;
-      max-width: 300px;
-      overflow:auto;
-    }
+    .itens ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-    .itens li{
-      background: rgba(255,255,255,0.9);
-      padding:8px 10px;
-      border-radius:10px;
-      display:flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items:center;
-      gap:20px;
-      border:1px solid rgba(0,0,0,0.03);
-    }
+    display: flex;              /* deixa os itens lado a lado */
+    flex-direction: row;        /* direção horizontal */
+    gap: 10px;
+
+    overflow-x: auto;           /* permite rolar para o lado */
+    overflow-y: hidden;         /* remove rolagem vertical */
+    white-space: nowrap;
+
+    max-width: 100%;
+    padding-bottom: 6px;        /* espaço para não cortar a sombra */
+}
+    .itens li {
+    background: rgba(255,255,255,0.9);
+    padding: 10px 14px;
+    border-radius: 10px;
+    display: inline-flex;       /* importante! */
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    border: 1px solid rgba(0,0,0,0.05);
+    width: auto;                /* impede expansão */
+    min-width: 160px;           /* tamanho padrão de cada cartão */
+}
     .itens li .remove{
       background: transparent;
       border: none;
@@ -367,47 +380,61 @@ margin-top: 10px;
       box-shadow: 0 6px 14px rgba(255,105,180,0.25);
     }
      /* carrinho */
-    .carrinho{
-      margin-top:8px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.85));
-      border-radius:16px;
-      padding:14px;
-      box-shadow: var(--shadow);
-      display:flex;
-      gap:12px;
-      align-items:center;
-      justify-content:space-between;
-      flex-wrap:wrap;
-    }
+    .carrinho {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1100px;
+
+    background: linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0.95));
+    border-radius: 18px 18px 0 0;
+
+    padding: 12px 20px;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.10);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
 
     .carrinho .itens{
       min-width:220px;
       max-width:760px;
     }
 
-    .itens ul{
-      list-style:none;
-      padding:0;
-      margin:auto;
-      display:flex;
-      flex-direction:column;
-      gap:6px;
-      max-height:140px;
-      max-width: 300px;
-      overflow:auto;
-    }
+    .itens ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-    .itens li{
-      background: rgba(255,255,255,0.9);
-      padding:8px 10px;
-      border-radius:10px;
-      display:flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items:center;
-      gap:20px;
-      border:1px solid rgba(0,0,0,0.03);
-    }
+    display: flex;              /* deixa os itens lado a lado */
+    flex-direction: row;        /* direção horizontal */
+    gap: 10px;
+
+    overflow-x: auto;           /* permite rolar para o lado */
+    overflow-y: hidden;         /* remove rolagem vertical */
+    white-space: nowrap;
+
+    max-width: 100%;
+    padding-bottom: 6px;        /* espaço para não cortar a sombra */
+}
+
+    .itens li {
+    background: rgba(255,255,255,0.9);
+    padding: 10px 14px;
+    border-radius: 10px;
+    display: inline-flex;       /* importante! */
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    border: 1px solid rgba(0,0,0,0.05);
+    width: auto;                /* impede expansão */
+    min-width: 160px;           /* tamanho padrão de cada cartão */
+}
     .itens li .remove{
       background: transparent;
       border: none;
