@@ -381,60 +381,35 @@ margin-top: 10px;
     }
      /* carrinho */
     .carrinho {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 1100px;
-
-    background: linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0.95));
-    border-radius: 18px 18px 0 0;
-
-    padding: 12px 20px;
-    box-shadow: 0 -4px 20px rgba(0,0,0,0.10);
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
+    flex-direction: column;      /* tudo empilhado no mobile */
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px;
 }
 
-    .carrinho .itens{
-      min-width:220px;
-      max-width:760px;
-    }
+.carrinho .itens {
+    width: 100%;
+    min-width: 0;                /* importante! */
+}
 
-    .itens ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    display: flex;              /* deixa os itens lado a lado */
-    flex-direction: row;        /* direção horizontal */
-    gap: 10px;
-
-    overflow-x: auto;           /* permite rolar para o lado */
-    overflow-y: hidden;         /* remove rolagem vertical */
+   .itens ul {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
     white-space: nowrap;
 
-    max-width: 100%;
-    padding-bottom: 6px;        /* espaço para não cortar a sombra */
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    padding-bottom: 6px;
 }
 
     .itens li {
-    background: rgba(255,255,255,0.9);
-    padding: 10px 14px;
-    border-radius: 10px;
-    display: inline-flex;       /* importante! */
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-
-    border: 1px solid rgba(0,0,0,0.05);
-    width: auto;                /* impede expansão */
-    min-width: 160px;           /* tamanho padrão de cada cartão */
+    min-width: 140px;            /* reduz para caber bem em tela pequena */
+    padding: 10px 12px;
 }
+
     .itens li .remove{
       background: transparent;
       border: none;
@@ -444,16 +419,15 @@ margin-top: 10px;
       font-size:14px;
     }
 
-    .totais{
-      text-align:right;
-      min-width:160px;
-    }
-
+    .totais {
+    width: 100%;
+    text-align: left;
+}
     .totais p{ margin:4px 0; font-weight:700; font-size:18px; color:#4b2b4b; }
 
     .finalizar{
       width:100%;
-      max-width:220px;
+      max-width:none;
       background: #25D366; /* whatsapp green */
       color:white;
       border:none;
