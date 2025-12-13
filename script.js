@@ -49,8 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
         border-radius:10px;
         background:#ffd6ec;
         margin:6px 0;
-        font-weight:700;
+        font-weight:bold ;
         cursor:pointer;
+        color: #810c8166;
+       
       `;
       btn.onclick = () => adicionarComSabor(sabor);
       lista.appendChild(btn);
