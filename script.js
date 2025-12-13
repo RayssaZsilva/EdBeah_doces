@@ -195,3 +195,24 @@ document.addEventListener('DOMContentLoaded', () => {
   atualizar();
   console.log("script.js inicializado com sucesso");
 });
+
+//BOTOES
+const carrossel = document.querySelector('.produtos');
+const btnPrev = document.querySelector('.btn-prev');
+const btnNext = document.querySelector('.btn-next');
+
+const larguraCard = 260; // card + gap
+
+btnPrev.addEventListener('click', () => {
+  carrossel.scrollBy({
+    left: -larguraCard,
+    behavior: "smooth"
+  });
+});
+
+btnNext.addEventListener('click', () => {
+  carrossel.scrollBy({
+    left: larguraCard,
+    behavior: "smooth"
+  });
+});
